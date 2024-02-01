@@ -1,6 +1,8 @@
 import { Hono } from 'hono';
 import { Redis } from '@upstash/redis/cloudflare';
 
+// test
+
 type HygraphBindings = {
 	HYGRAPH_ENDPOINT: string;
 	HYGRAPH_API_KEY: string;
