@@ -1,6 +1,7 @@
 name = "hygraph-garas-blog-intermediate"
 main = "src/index.ts"
 compatibility_date = "2024-01-29"
+workers_dev = false
 
 [placement]
 mode = "smart"
