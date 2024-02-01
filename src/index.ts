@@ -94,7 +94,7 @@ const fetch_one_and_cache = async (bindings: Bindings, query: string, id: string
 
 const fetch_many_and_cache = async (bindings: Bindings, query: string) => {
 	const	{ HYGRAPH_ENDPOINT, HYGRAPH_API_KEY } = bindings;
-	
+
 	return await fetch(`${HYGRAPH_ENDPOINT}`, {
 		method: 'POST',
 		headers: {
