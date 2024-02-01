@@ -1,0 +1,19 @@
+{
+  "name": "hygraph-garas-blog-intermediate",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240129.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.28.2",
+    "hono": "^3.12.9"
+  }
+}
