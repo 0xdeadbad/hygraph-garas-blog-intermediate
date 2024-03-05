@@ -10,16 +10,16 @@ type HygraphBindings = {
 
 type RedisBindings = {
 	UPSTASH_REDIS_REST_URL: string;
-  UPSTASH_REDIS_REST_TOKEN: string;
+	UPSTASH_REDIS_REST_TOKEN: string;
 };
 
 type Bindings = HygraphBindings & RedisBindings;
 
-const formatString = (template: string, ...args: string[]) => {
-  return template.replace(/{([0-9]+)}/g, function (match, index) {
-    return typeof args[index] === 'undefined' ? match : args[index];
-  });
-};
+// const formatString = (template: string, ...args: string[]) => {
+//   return template.replace(/{([0-9]+)}/g, function (match, index) {
+//     return typeof args[index] === 'undefined' ? match : args[index];
+//   });
+// };
 
 const query_posts = `
 query Assets {
@@ -28,6 +28,7 @@ query Assets {
 		createdAt
 		title
 		slug
+		description
 	}
 }
 `;
@@ -41,6 +42,7 @@ query Assets {
     createdAt
     title
     slug
+	description
   }
 }
 `;
@@ -48,7 +50,7 @@ query Assets {
 interface Post {
 	data: {
 		post: {
-			content: {
+			content?: {
 				markdown: string;
 			};
 			createdAt: string;
@@ -61,7 +63,7 @@ interface Post {
 interface Posts {
 	data: {
 		posts: {
-			content: {
+			content?: {
 				markdown: string;
 			};
 			id: string;
